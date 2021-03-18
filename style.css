@@ -21,12 +21,37 @@
 /* General Styles */
 
 body {
-    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    background-image: url(background--img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     font-family: var(--ff-primary);
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+header {
+    text-align: center;
+    background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    padding: 0.5em;
+    color: var(--clr-light);
+}
+
+h1 {
+    padding: 10px;
+}
+
+input {
+    padding: 0.5em;
+    font-weight: var(--fw-bold);
+}
+
+button {
+    padding: 0.5em;
+    font-weight: var(--fw-bold);
 }
 
 /* Class Styles */
