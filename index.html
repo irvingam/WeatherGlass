@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" 
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" 
+    crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;800&display=swap" rel="stylesheet">
     <title>WeatherGlass</title>
@@ -12,13 +15,23 @@
 <body>
     <div class="wrapper">
         <header>
-            <h1>Weather Glass App</h1>
+            <h1 class="title">Weather Glass App</h1>
+            <span class="date" id="current-date">Friday March 19, 2021</span>
             <input type="text" autocomplete="off" class="search-input" placeholder="Enter location...">
-            <button class="search-btn" id="add-btn">Add</button>
+            <button class="search-btn" id="add-btn">ADD</button>
         </header>
-        <section class="bottom">
-            
-        </section>
+
+        <main class="module">
+            <section class="location">
+                <div class="city">Richmond</div>
+            </section>
+            <section class="current">
+                <div class="temp">13°c</div>
+                <div class="weather">Sunny</div>
+                <div class="weather-icon"><i class="fas fa-sun"></i></div>
+                <div class="hi-low">4°c / 14°c</div>
+            </section>
+        </main>
 
     </div>
 <script src="app.js"></script>
