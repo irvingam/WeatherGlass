@@ -15,6 +15,7 @@
 
     --clr-light: #fff;
     --clr-dark: #000;
+    --clr-one: #d53762;
 
 }
 
@@ -33,7 +34,9 @@ body {
 
 header {
     text-align: center;
-    background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+    background: linear-gradient(to right bottom, 
+        rgba(0, 0, 0, 0.3), 
+        rgba(0, 0, 0, 0.6));
     border-top-left-radius: 2em;
     border-top-right-radius: 2em;
     padding: 0.5em;
@@ -44,25 +47,49 @@ h1 {
     padding: 10px;
 }
 
+span {
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
 input {
     padding: 0.5em;
     font-weight: var(--fw-bold);
+    border: none;
+    border-radius: 5em;
+    outline: none;
 }
 
 button {
     padding: 0.5em;
     font-weight: var(--fw-bold);
+    background: ;
+    border: none;
+    outline: none;
+    border-radius: 3em;
+    transition: all 0.4s ease;
+}
+
+button:hover {
+    background: var(--clr-one);
+    color: var(--clr-light);
 }
 
 /* Class Styles */
+
+.title,
+.date {
+    display: flex;
+    flex-direction: column;
+}
 
 .wrapper {
     background: var(--clr-light);
     min-height: 80vh;
     width: 60%;
     background: linear-gradient(to right bottom,
-     rgba(255, 255, 255, 0.7),
-     rgba(255, 255, 255, 0.3));
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3));
     border-style: solid;
     border-width: 1px;
     border-radius: 2rem;
