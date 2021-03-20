@@ -7,7 +7,12 @@ const addBtn = document.getElementById('add-btn')
 const input = document.getElementById('search')
 
                 // Events //
+// add button event
 addBtn.addEventListener('click', setQuery)
+// press 'enter' event
+input.addEventListener('keypress', (event) => {
+    if (event.keyCode == 13) {getResults(input.value)}
+})
 
 // displays current date
 window.onload = function displayDate() {
@@ -17,10 +22,12 @@ window.onload = function displayDate() {
 }
 
                 // Functions //
+// pushes input info to API
 function setQuery(event) {
     getResults(input.value)
 }
 
+// generates date for display
 function getDate(date) {
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
@@ -33,6 +40,7 @@ function getDate(date) {
     return `${day} ${today} ${month} ${year}`
 }
 
+// fetches weather info 
 function getResults(query) {
     fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
     .then(weather => {
@@ -40,6 +48,7 @@ function getResults(query) {
     }).then(displayWeather)
 }
 
+// adds weather module to container
 function displayWeather(weather) {
     console.log(weather)
 
