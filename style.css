@@ -63,7 +63,7 @@ input {
 button {
     padding: 0.5em;
     font-weight: var(--fw-bold);
-    background: ;
+    background: var(--clr-light);
     border: none;
     outline: none;
     border-radius: 3em;
@@ -94,4 +94,21 @@ button:hover {
     border-width: 1px;
     border-radius: 2rem;
     border-color: var(--clr-light);
+}
+
+.module-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.module {
+    margin: 2em;
+    color: var(--clr-light);
+    background: linear-gradient(to right bottom, 
+        rgba(0, 0, 0, 0.3), 
+        rgba(0, 0, 0, 0.6));
+    padding: 1.5em;
+    max-width: 150px;
+    border: 0.2px solid var(--clr-light);
+    border-radius: 1em;
 }
